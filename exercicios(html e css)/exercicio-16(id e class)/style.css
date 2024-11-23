@@ -1,0 +1,36 @@
+@charset "UTF-8";
+body{
+    background-color: antiquewhite;
+    font: normal normal 16px Arial, Helvetica, sans-serif;
+    margin: auto;
+}
+h1{
+    font-style: italic;
+    }
+#principal{
+    text-align: center;
+    background: rgb(92, 23, 23);
+    color: white;
+    margin-top: auto;
+}
+.topico1{
+    color: rgb(246, 182, 113)
+}
+.topico2{
+    color: rgb(148, 151, 66)
+}
+
+p{
+    text-align: justify;
+    text-indent: 20px;
+}
+.geral{
+    background-color: blue;
+    color:white;
+    padding: 15px;
+}
+#p-div{
+    text-align: center;
+    background-color: aqua;
+    margin-top: auto;
+}

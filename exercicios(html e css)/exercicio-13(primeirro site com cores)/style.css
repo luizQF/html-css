@@ -1,0 +1,28 @@
+@charset "UTF-8";
+
+*{
+   text-align: justify;
+   font-family: Arial, Helvetica, sans-serif;
+}
+body{
+    background-image:linear-gradient(to right, #3e7186,#1f4555,#19313a) /*para definir um degradê utilizar background-image junto do parametro linear-gradient, indicar a direção (no exemplo acima está to right "para direita") e em seguida as cores que formarão do degradê*/
+}
+main{
+    background-color:#10ABB4;
+    color: white;
+    margin: auto;/*centraliza tudo dentro do seletor main no centro do site*/
+    padding: 20px;
+    width: 600px;
+    border-radius: 10px;
+    box-shadow: 10px 10px 20px #19313a;/*Adiciona uma sombra aos itens dentro da caixa, o primeiro parametro mostra o deslocamento para direita, o segundo o deslocamento para baixo, o terceiro a quantidade que a sombra se espalha, e o quarto a cor da sombra */
+    border: solid #19313a9b;/*define uma borda, o valor solid define que a borda será visivel, e o valor seguinte é a cor da borda*/
+}
+h1{
+    color: #ffffff;
+    text-align: center;/*centraliza o texto*/
+    text-shadow: 1px 1px 0 rgb(0, 0, 0);/*text-shadow: 1px 1px 0 black; define a sombra de um texto e o primeiro parametro define o deslocamento para direita, o segundo para baixo, e o terceiro o tanto que espalha e o ultimo a cor */
+}
+h2{
+   color:#ffffff; 
+   text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.84);
+}

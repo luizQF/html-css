@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        @font-face{
+            font-family:'frathaman';
+           src: url(Frathaman\ Holland.otf) format(opentype)/*pode adicionar quantas url quiser*/
+        }
+        body{
+            font: italic normal 10px Arial, helvetica, sans-serif;
+            
+        }
+        h1{
+            font-size: 2em
+        }
+        .testef{
+            font-family:'frathaman', sans-serif;
+            font-size: 2em;
+        }
+    </style>
+</head>
+<body>
+    <h1>Fontes externas utilizando dowload</h1>
+    <p> baixamos as fontes para adicionarmos ao nosso site<br> (site recomendado para dowload de fontes: Dafont)</p><br> <p>para introduzir uma fonte ja instalada utilizaremos a regra <br>
+        <pre>
+            <code>
+                @font-face {
+                     font-family:nome que quiser (frathaman);
+                     src: url('Frathaman Holland.otf') format(opentype<!--(opentype/truetype/embedded-opentype/truetype-aat/svg)-->);<!--otf/ttf-->
+                    }
+            </code>
+        </pre>  </p>
+        <h2>Testando a fonte aplicada</h2>
+        <p class="testef">Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto, error harum provident nisi officia ex eos suscipit accusantium aliquid non a commodi autem dolore, quo quidem hic dignissimos? Corporis, nostrum.</p>
+</body>
+</html>

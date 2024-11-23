@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport"
+        content="width=device-width, initial-scale=1.0">
+        <title>website</title>
+        <style>
+       body{
+        font:normal 16px Arial, Helvetica, sans-serif;
+       }
+       h1{
+        background-color: antiquewhite;
+        border: solid 1px black;
+        padding: 5px;
+       }
+       a{
+        color:rgb(192, 133, 91);
+        text-decoration: none;
+       }
+       a::after{
+        content: '[link]';
+        color: grey;
+        display: none;
+       }
+       a:hover::after {
+        display: inline-block;
+       }
+        </style>
+    </head>
+    <body>
+        <h1>Personalização de links com pseudo-class e pseudo-elements</h1>
+        <p>Lista de links</p>
+        <ul>
+            <li><a href="#">Youtube</a></li>
+            <li><a href="#">Instagram</a></li>
+            <li><a href="#">Facebook</a></li>
+        </ul>
+    </body>
+</html>

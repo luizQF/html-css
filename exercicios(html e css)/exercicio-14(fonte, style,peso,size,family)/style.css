@@ -1,0 +1,13 @@
+@charset "UTF-8";
+
+
+body{
+font: italic normal 1em Arial, sans-serif
+} /* ordem das fonts= font-style, font-weight, font-size, font-family*/
+/*as alterações serão aplicadas a todos os elementos de texto dentro do corpo*/
+/*medida px de tamanho é mais para seletores individuais(ex: seletor p abaixo), pois se colocar 16px no body, o titulo consequentemente ficará com 16px, para evitar isso só utilizar a medida "em"*/
+/*texto= formado por varias palavras X fonte= as letras que formam as palavras*/
+p{
+    font-size: 16px;
+    text-align: justify;
+}

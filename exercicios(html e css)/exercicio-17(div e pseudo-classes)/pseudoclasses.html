@@ -1,0 +1,48 @@
+<!DOCTYPE html> 
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport"
+        content="width=device-width, initial-scale=1.0">
+        <title>Pseudoclass</title>
+        <style>
+          body{
+            background-color: beige;
+          }
+          div{
+            background-color: antiquewhite; 
+            width: 75x;
+          }
+          #p1:hover{
+            color:red;
+           }
+           div > #b1{
+            display: none;
+           }
+           div:hover > #b1{
+            display: block;
+           }  
+           button{
+            background-color: antiquewhite;
+           }     
+
+        </style>
+    </head>
+    <body>
+        <h1>Titulo</h1>
+        <p>Pseudo-classes é o nome dado a a seletores que adicionam estado aos elementos, exemplo:
+          <pre>
+            nomedoseletor:hover{
+              color:red;
+            }
+          </pre> quando o passar o mouse em cima do elementos a cor dele ficará vermelho<br>
+          podemos criar menus interativos utilizandos o display: none; para ocultar um item.
+        </p>
+        <div>
+          <button id="p1">teste aqui</button>
+            <button id="b1">BOtão</button>
+        </div>
+
+           
+    </body>
+</html>
