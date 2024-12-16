@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jogo de Pular Obstáculos</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #87CEEB;
+            overflow: hidden;
+        }
+        #gameCanvas {
+            display: block;
+            margin: 0 auto;
+            background-color: #e1e1e1;
+        }
+        #menu {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+            font-size: 24px;
+        }
+        #menu button {
+            padding: 10px 20px;
+            font-size: 18px;
+            cursor: pointer;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+        }
+        #menu button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+
+<div id="menu">
+    <h1>Jogo de Pular Obstáculos</h1>
+    <button onclick="iniciarJogo()">Play</button>
+</div>
+
+<canvas id="gameCanvas" width="800" height="400"></canvas>
+
+<script>
+    const canvas = document.getElementById('gameCanvas');
+    const ctx = canvas.getContext('2d');
+    const menu = document.getElementById('menu');
+
+    // Definir o personagem
+    const personagem = {
+        x: 50,
+        y: 350,
+        width: 30,  // Largura do personagem
+        height: 50,
+        velocidade: 3,
+        gravidade: 0.8,
+        forcaPulo: -22,
+        velocidadePulo: 0,
+        pulando: false
+    };
+
+    // Obstáculos
+    const obstaculos = [];
+    const larguraObstaculo = personagem.width / 2; // Largura dos obstáculos com 50% do tamanho do personagem
+    const intervaloObstaculos = 2000; // Intervalo entre os obstáculos
+
+    let jogoAtivo = false;
+    let score = 0;
+
+    // Função para iniciar o jogo
+    function iniciarJogo() {
+        menu.style.display = 'none';
+        jogoAtivo = true;
+        score = 0;
+        personagem.y = 350;
+        personagem.velocidadePulo = 0;
+        obstaculos.length = 0;
+        gerarObstaculo();
+        requestAnimationFrame(jogo);
+    }
+
+    // Função para gerar obstáculos
+    function gerarObstaculo() {
+        if (jogoAtivo) {
+            setInterval(() => {
+                const alturaObstaculo = Math.random(1) * (20 - 40) + 200; // Obstáculo com altura aleatória
+                obstaculos.push({ x: canvas.width, y: alturaObstaculo, largura: larguraObstaculo });
+            }, intervaloObstaculos);
+        }
+    }
+
+    // Função para detectar colisões
+    function verificarColisao() {
+        for (let i = 0; i < obstaculos.length; i++) {
+            const obs = obstaculos[i];
+            if (personagem.x + personagem.width > obs.x && personagem.x < obs.x + obs.largura &&
+                personagem.y + personagem.height > obs.y) {
+                jogoAtivo = false;
+                alert("Game Over! Pontuação: " + score);
+                menu.style.display = 'block';
+            }
+        }
+    }
+
+    // Função para mover os obstáculos
+    function moverObstaculos() {
+        for (let i = 0; i < obstaculos.length; i++) {
+            obstaculos[i].x -= personagem.velocidade;
+            if (obstaculos[i].x + larguraObstaculo < 0) {
+                obstaculos.splice(i, 1);
+                score++;
+            }
+        }
+    }
+
+    // Função para desenhar o personagem e obstáculos
+    function desenhar() {
+        ctx.clearRect(0, 0, canvas.width, canvas.height);
+        ctx.fillStyle = '#FF6347';
+        ctx.fillRect(personagem.x, personagem.y, personagem.width, personagem.height);
+
+        for (let i = 0; i < obstaculos.length; i++) {
+            const obs = obstaculos[i];
+            ctx.fillStyle = '#008000';
+            ctx.fillRect(obs.x, obs.y, obs.largura, canvas.height - obs.y);
+        }
+
+        ctx.fillStyle = '#000';
+        ctx.font = '20px Arial';
+        ctx.fillText('Pontuação: ' + score, 10, 30);
+    }
+
+    // Função para atualizar a física do personagem
+    function atualizarFisica() {
+        if (personagem.pulando) {
+            personagem.velocidadePulo += personagem.gravidade;
+            personagem.y += personagem.velocidadePulo;
+
+            if (personagem.y > 350) {
+                personagem.y = 350;
+                personagem.pulando = false;
+                personagem.velocidadePulo = 0;
+            }
+        }
+    }
+
+    // Função principal do jogo
+    function jogo() {
+        if (jogoAtivo) {
+            moverObstaculos();
+            verificarColisao();
+            atualizarFisica();
+            desenhar();
+            requestAnimationFrame(jogo);
+        }
+    }
+
+    // Função para pular
+    document.addEventListener('keydown', function (evento) {
+        if (evento.key === ' ' && !personagem.pulando) { // Verifica se a tecla pressionada é a barra de espaço
+            personagem.velocidadePulo = personagem.forcaPulo;
+            personagem.pulando = true;
+        }
+    });
+
+</script>
+
+</body>
+</html>
+
+
