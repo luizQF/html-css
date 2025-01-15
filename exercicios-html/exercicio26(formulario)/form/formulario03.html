@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>form</title>
+</head>
+<body>
+    <form action="script.js" method="get" autocomplete="on">
+        <fieldset>
+            <legend>Dados no aluno</legend>
+            <p>
+                <label for="iname">nome:</label>
+                <input type="text" name="nome" id="iname" required autocomplete="name" maxlength="30"
+                placeholder="insira seu nome">
+            </p>
+            <!--media-->
+            <p>
+                <label for="imedia">media:</label>
+                <input type="number" name="media" id="imedia" placeholder="media" min="1" max="10" required step="0.25">
+            </p>
+            <!--mes da prova-->
+            <p>
+                <label for="idate">Mês da prova:</label>
+                <input type="month" name="date" id="idate" required>
+            </p>
+            <!--Ano da prova-->
+            <p>
+                <label for="iyear">Ano letivo:</label>
+                <input type="date" name="year" id="iyear" required>
+            </p>
+            <!--horario-->
+            <p>
+                <label for="itime">Horario da prova</label>
+                <input type="time" name="time" id="itime" required>
+            </p>
+        </fieldset>
+        <!--finalizar-->
+        <input type="submit" value="Finalizar">
+        <input type="reset" value="Limpar">
+        <div id="res">
+
+        </div>
+    </form>
+</body>
+</html>

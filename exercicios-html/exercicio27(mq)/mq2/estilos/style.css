@@ -1,0 +1,10 @@
+@charset "UTF-8";
+/*Global sets*/
+*{
+    padding: 0;
+    margin: 0;
+}
+html{
+    font: normal 1em Arial, Helvetica, sans-serif;
+    color: white;
+}

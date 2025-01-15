@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Redes Sociais</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="pacote-img/favicon.ico" type="image/x-icon">
+</head>
+<body>
+    <main>
+        <section id="phone">
+            <iframe src="tela/home.html" id="screen" frameborder="0" name="content" ></iframe>
+        </section>
+        <input type="button" onclick="exibir()" id="botao" value="menu">
+        
+        </p>
+        <section id="social-container">
+            <nav id="social">
+                <a href="tela/home.html" target="content">
+                    <img src="pacote-img/imagens/logo-home.jpg" alt="">
+                </a>
+                <!--Pág facebook-->
+                <a href="tela/facebook.html" target="content">
+                    <img src="pacote-img/imagens/logo-facebook.jpg" alt="">
+                </a>
+                <!--github-->
+                <a href="tela/git.html" target="content">
+                    <img src="pacote-img/imagens/logo-github.jpg" alt="">
+                </a>
+                <!--instagram-->
+                <a href="tela/instagram.html" target="content">
+                    <img src="pacote-img/imagens/logo-instagram.jpg" alt="">
+                </a>
+                <!--Twitter-->
+                <a href="tela/twiter.html" target="content">
+                    <img src="pacote-img/imagens/logo-twitter.jpg" alt="" >
+                </a>
+                <!--youtube-->
+                <a href="tela/youtube.html" target="content">
+                    <img src="pacote-img/imagens/logo-youtube.jpg" alt="">
+                </a>
+            </nav>
+        </section>
+        <script>
+            function exibir(){
+                var menu = document.querySelector('#social')
+                var bot = document.querySelector('#botao')
+                if(bot.value === 'menu'){
+                    bot.value = 'fechar'
+                    menu.style.transform = 'translate(-115%)'
+                }else if(bot.value === 'fechar'){
+                    bot.value = 'menu'
+                    menu.style.transform = 'translate(0%)'
+                }
+            }
+        </script>
+    </main>
+</body>
+</html>

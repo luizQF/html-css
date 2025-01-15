@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport"
+        content="width=device-width, initial-scale=1.0">
+        <title>Output</title>
+    </head>
+    <body>
+        <form action="script.js" method="post">
+            <h1>Output range</h1>
+            <label for="iav">avaliação</label>
+            <input type="range" name="av" id="iav" oninput="avl.innerHTML = Number(iav.value)" min="0" max="10">
+            <output id="avl">5</output>
+            <input type="submit" value="Enviar">
+            <!--
+            --RANGE--
+                //Uso de range
+                    * O valor de range vai de 0 a 100 como padrão podemos definir isso utilizando min e max.
+                    * Podemos exibir o valor do range utilizando um output,
+                    para isso utilizamos um evento no input, para que sempre que ocorra uma interação ele mude o valor do output.
+                    para isso indicamos que o ID 'avl'(id do output) vai receber em seu valor o valor do input toda vez que a interação ocorrer.
+            -->
+        </form>
+    </body>
+</html>

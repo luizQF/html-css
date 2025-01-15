@@ -1,0 +1,8 @@
+/*Portrait sets*/
+body{
+    background: #233EFF url('../imagens/cev-portrait.jpg') center bottom no-repeat fixed;
+    background-size: contain;
+}
+p::after{
+    content: ' Modo portrait(retrato) Exibido quando o dispositivo está em pé';
+}

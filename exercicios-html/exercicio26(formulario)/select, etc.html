@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>form</title>
+</head>
+<body>
+    <form action="script.js" method="get">
+        <select name="prof" id="iprof" style="margin-bottom: 20px;">
+            <optgroup label="Profissões">
+                <option value="ADM">Adminitração</option>
+                <option value="PROF">Professor</option>
+                <option value="AD">Advogado</option>
+            </optgroup>
+            <option value="" selected>--ESCOLHA--</option><!--atributo selected deixa a opção como padrão-->
+        </select><br>
+        <!--podemos usar também input de textos e adicionar uma datalist nele para aparecem sugestões e também o cliente poder escrever-->
+        <input type="text" name="profissao" id="iprofissao" list="prof" placeholder="Digite sua profissão...">
+            <datalist id="prof">
+                <option value="Administração">ADM</option>
+                <option value="Professor">PR</option>
+                <option value="Advogado">AD</option>
+            </datalist><br>
+        <label id="imsg">mensagem</label><br>
+            <textarea name="msg" id="imsg" cols="30" rows="10" placeholder="Escreva sua mensagem"></textarea>
+        <br>
+        <input type="submit" value="Enviar">
+    </form>
+</body>
+</html>

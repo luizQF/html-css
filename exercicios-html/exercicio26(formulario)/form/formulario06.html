@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+</head>
+<body>
+    <form action="script.js" method="get">
+        <p>
+            Cor favorita:
+            <input type="color" name="cor" id="icor" value="#aa00aa"> <!--value define qual cor vai ser exibida como padrão (só aceita códigos hexadecimais)-->
+        </p>
+        <p>
+            avalie:
+            <input type="range" name="ava" id="iava" min="1" max="5" value="1">
+            <!--min e max define valor, o padrão é de min='1' a max='100', value define em que valor o range começará-->
+        </p>
+        <p>
+            selecione uma imagem: <br> <input type="file" name="img" id="iimg"><!--só funciona se o metodo for post-->
+        </p>
+    </form>
+</body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>output</title>
+</head>
+<body>
+    <form action="scri.js">
+        <label for="iage">digite seu data de nascimento:</label>
+            <input type="Number" name="age" id="iage" oninput="calcAge()" min="1900" value="2000" required><br>
+        <label for="yage">Sua idade é:</label>
+            <output id="yage">0</output>
+    </form>
+        <!--
+        --Lista de definições--
+            --LABEL--
+                //Tag label
+                    * É usada para transformar a palavra e o elemento um só, e indicar ao navegador que o nome se refere ao elemento.
+                    * o for em label é usado para indicar de qm é o rótulo, o espaço deve ser preenchido com o id do elemento.
+
+            --INPUT--
+                //Input e seus atributos 
+                    * (oninput) dispara uma função quando interaje com o input;
+                    * (min e max) min é o valor mínimo aceito dentro do input, caso o valor inserido seja menor o valor não será aceito
+                    * (minlength e maxlength) é utilizados em input de tipo texto, limitando o minimo de letras e o máximo
+             
+            --REQUIRED--
+                //Required para que serve?
+                    * torna o input obrigatório dentro de um formulario
+                    * impossibilita o envio de informações de valor nulo.
+
+            --OUTPUT--
+                * É a saída do valor colocado no input. Normalmente usado no input range, que o valor é oculto.
+        -->
+    <script>
+        function calcAge(){
+           let ano = new Date().getFullYear()
+           yage.innerHTML = Number(ano) - Number(iage.value)
+        }
+    </script>
+</body>
+</html>

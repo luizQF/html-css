@@ -1,0 +1,40 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+article{
+    padding: 10px;
+    display: block;
+    margin: auto;
+    max-width: 600px;
+    text-align: justify;
+    background-color: rgba(196, 196, 196, 0.252);
+    height: 100vh;
+}
+header{
+    background-color: gray;
+    font: normal 2.5vw Arial, Helvetica, sans-serif;
+    padding: 30px 0 30px 0;
+}
+    header h1{
+        text-align: center;
+        background-color: rgb(35, 35, 35);
+        width: 100%;
+        color: white;
+    }
+nav{
+    background-color: rgb(98, 96, 96);
+}
+    nav li{
+        display: inline-block;
+        background-color: rgb(50, 49, 49);
+        padding: 5px;
+        color: white;
+    }
+    nav li:hover{
+        background-color: rgb(104, 107, 109);
+        cursor: pointer;
+    }
+p{
+    margin-top: 20px;
+}

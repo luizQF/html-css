@@ -1,0 +1,8 @@
+/*Landscape sets*/
+body{
+    background: #233EFF url('../imagens/cev-landscape.jpg') left bottom no-repeat fixed;
+    background-size: contain;
+}
+p::after{
+    content: ' Modo Landscape(paisagem) exibição da tela quando esta virada de forma horizontal';
+}

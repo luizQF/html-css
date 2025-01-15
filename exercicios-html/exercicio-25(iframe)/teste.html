@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Slides em HTML</title>
+  <style>
+    /* Estilos básicos */
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f4f4f4;
+    }
+
+    .slides-container {
+      position: relative;
+      width: 100%;
+      max-width: 600px;
+      margin: 50px auto;
+      overflow: hidden;
+    }
+
+    .slides {
+      display: flex;
+      transition: transform 0.5s ease;
+    }
+
+    .slide {
+      min-width: 100%;
+      box-sizing: border-box;
+      background-color: #fff;
+      padding: 20px;
+      border: 1px solid #ddd;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .slide img {
+      width: 100%;
+      height: auto;
+    }
+
+    .nav-buttons {
+      position: absolute;
+      top: 50%;
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      transform: translateY(-50%);
+    }
+
+    .prev, .next {
+      background-color: rgba(0, 0, 0, 0.5);
+      color: white;
+      border: none;
+      padding: 10px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="slides-container">
+    <div class="slides">
+      <div class="slide">
+        <h2>Slide 1</h2>
+        <p>Este é o conteúdo do primeiro slide.</p>
+        <img src="https://via.placeholder.com/600x300" alt="Imagem 1">
+      </div>
+      <div class="slide">
+        <h2>Slide 2</h2>
+        <p>Este é o conteúdo do segundo slide.</p>
+        <img src="https://via.placeholder.com/600x300" alt="Imagem 2">
+      </div>
+      <div class="slide">
+        <h2>Slide 3</h2>
+        <p>Este é o conteúdo do terceiro slide.</p>
+        <img src="https://via.placeholder.com/600x300" alt="Imagem 3">
+      </div>
+      <div class="slide">
+        <h2>Slide 4</h2>
+      </div>
+    </div>
+
+    <!-- Botões de navegação -->
+    <div class="nav-buttons">
+      <button class="prev" onclick="moveSlide(-1)">&#10094;</button>
+      <button class="next" onclick="moveSlide(1)">&#10095;</button>
+    </div>
+  </div>
+
+  <script>
+    let Slideatual = 0
+    function moveSlide(direction){
+      const TotalS = document.querySelectorAll('.slide').length
+      const slides = document.querySelector('.slides')
+      Slideatual = (Slideatual + direction + TotalS) % TotalS
+      slides.style.transform = `translateX(-${Slideatual * 100}%)`
+    }
+  </script>
+
+</body>
+</html>

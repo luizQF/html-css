@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>form</title>
+</head>
+<body>
+    <form action="script.js" method="get">
+        <fieldset>
+            <legend>Esporte</legend>
+            <p style="margin-left: 20px; color: #0000009c;">Seus esportes favoritos</p>
+            <input type="checkbox" name="esfut" id="iesfut"><label for="iesfut">Futebol</label><br>
+            <input type="checkbox" name="esbas" id="iesbas"><label for="iesbas">Basquete</label><br>
+            <input type="checkbox" name="esten" id="iesten"><label for="iesten">Tênis</label><br>
+            <input type="checkbox" name="esnat" id="iesnat"><label for="iesnat">Natação</label><br>
+        </fieldset>
+        <fieldset>
+            <legend>Sexo</legend>
+            <input type="radio" name="sex" id="ifem" required><label for="ifem">Feminino</label>
+            <input type="radio" name="sex" id="imas" required><label for="imas">Masculino</label>
+        </fieldset>
+        <input type="button" value="Salvar" onclick="salvar()">
+        <p>
+            não lembra do seu gênero?
+            <input type="button" value="Cheque aqui" onclick="confirm()">
+        </p>
+        <div id="res"></div>
+    </form>
+    <script>
+        let sexo = document.getElementsByName('sex')
+        let gen = ''
+        function salvar(){
+            if(sexo[0].checked){
+                alert('você selecionou Feminino')
+                gen = 'Feminino'
+            }else if(sexo[1].checked){
+                alert('você selecionou Masculino')
+                gen = 'Masculino'
+            }
+            let resp = document.getElementById('res')
+            let inp = document.createElement('input')
+            inp.setAttribute('type', 'submit')
+            inp.setAttribute('value', 'Send')
+            inp.setAttribute('id', 'sendb')
+            if(!document.getElementById('sendb') && sexo[0].checked || sexo[1].checked){
+            resp.appendChild(inp)
+            }
+        }
+        function confirm(){
+            if(gen == ''){
+                alert('Selecione e salve o genero antes')
+            }else{
+                alert(`seu gênero é ${gen}`)
+            }
+        }
+    </script>
+</body>
+</html>

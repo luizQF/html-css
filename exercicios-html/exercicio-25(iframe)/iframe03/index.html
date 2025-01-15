@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>iframe</title>
+    <style>
+        body{
+            font: normal 1em Arial, Helvetica, sans-serif;
+        }
+        iframe{
+            width: 450px;
+            height: 500px;
+            border: 2px solid black;
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <h1>Navegação com iframe</h1>
+    <p>Ao clicar em um dos links o conteúdo será aberto dentro do iframe</p>
+    <nav>
+        <ul type="square">
+            <li><a href="paginas/pag1.html" target="ifr">primeira pagina</a></li>
+            <li><a href="paginas/pag2.html" target="ifr">segunda pagina</a></li>
+            <li><a href="paginas/pag3.html" target="ifr">segunda pagina</a></li>
+        </ul>
+    </nav>
+    <iframe srcdoc="<h1>selecione uma das opções acima</h1>" name="ifr"></iframe>
+</body>
+</html>

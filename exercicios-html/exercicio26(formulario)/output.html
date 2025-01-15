@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Output</title>
+    <style>
+        input{
+            width: 50px;
+        }
+    </style>
+</head>
+<body>
+    <form action="" method="post">
+        <p>
+            <label for="in1">Digite um número:</label>
+                <input type="number" name="n1" id="in1" min="0" max="100" required oninput="out.innerHTML = Number(in1.value) + Number(in2.value)">
+        </p>
+        <p>
+            <label for="in2">Digite outro número:</label>
+                <input type="number" name="n2" id="in2" min="0" max="100" required oninput="out.innerHTML = Number(in1.value) + Number(in2.value)">
+        </p>
+        <label for="out">Soma dos números:</label>
+        <output id="out">0</output>
+        <style>
+            /*
+            --FORM--
+             * EM form podemos utilizar dois atributos, 'action' que indica o script q os dados vão ser enviador, e method, que caso seja get exibe no URL e impossibilita a utilização de alguns inputs, tipo o input file. já o method post "oculta" os dados da URL
+            */
+        </style>
+    </form>
+</body>
+</html>

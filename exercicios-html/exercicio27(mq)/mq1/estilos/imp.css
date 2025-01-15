@@ -1,0 +1,19 @@
+@charset "UTF-8";
+/*Estilo de impressora*/
+html{
+    font-family: 'Courier New', Courier, monospace
+}
+article p{
+    line-height: 25px;
+}
+nav{
+    display: none;
+}
+h2{
+    font-weight: 520;
+}
+article::after{
+    content: 'Modelo de site impresso, feito por LuizQF.';
+    font-size: 0.8em;
+    font-weight: bold;
+}
