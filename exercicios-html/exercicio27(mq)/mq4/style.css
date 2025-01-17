@@ -1,0 +1,45 @@
+@charset "UTF-8";
+
+*{
+    padding: 0;
+    margin: 0;
+}
+body, html{
+    height: 100vh;
+    font-family: Arial, Helvetica, sans-serif;
+}
+body{
+    background:white url('imagens/back-phone.jpg') center center no-repeat fixed;
+    background-size: cover;
+}
+    main{
+        background-color: rgba(0, 0, 0, 0.614);
+        width: 80%;
+        margin: auto;
+        margin-top: 20px;
+        border-radius: 10px;
+        padding: 20px;
+    }
+        h1{
+            color: white;
+            font-size: 2em;
+        }
+        img{
+            margin: auto;
+            display: block;
+        }
+            img#phone{
+                display: block;
+            }
+            img#tablet{
+                display: none;
+            }
+            img#tv{
+                display: none;
+            }
+            img#desktop{
+                display: none;
+            }
+            img#imp{
+                display: none;
+            }

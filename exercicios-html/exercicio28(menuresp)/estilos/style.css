@@ -1,0 +1,59 @@
+@charset "UTF-8";
+
+/*default setting*/
+*{
+    padding: 0;
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+header{
+    background-color: rgb(91, 91, 91);
+    height: 15vh;
+    font: normal 1.2em ;
+    color: #ffffff;
+    text-shadow: 1px 1px 2px black;
+    text-align: center;
+    position: relative;
+}
+#menu{
+    width: 43px;
+    height: 43px;
+    background: rgb(134, 109, 109);
+    position: absolute;
+    top: 60px; left: 50%;
+    transform: translateX(-50%);
+    background: white url('../menu.jpg') center center no-repeat scroll;
+    background-size: cover;
+    border-radius: 50%;
+    cursor: pointer;
+}
+nav{
+    background-color: gray;
+    padding: 7px;  
+    display: none;
+}
+.active{
+    display: block;
+}
+ul li{
+    display: block;
+    font-size: 1.1em;
+    color: black;
+    border: 1px solid black;
+    box-sizing: border-box;
+    padding: 5px;
+    background-color: rgb(218, 215, 215);
+    cursor: pointer;
+    text-align: center;
+}
+ul li:hover{
+    background-color: rgb(255, 255, 255);
+}
+main article{
+    background-color: rgb(228, 228, 228);
+    width: 70vw;
+    margin: auto;
+    text-align: justify;
+    padding: 10px;
+    line-height: 40px;
+}

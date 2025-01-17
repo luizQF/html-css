@@ -1,0 +1,12 @@
+@charset "UTF-8";
+
+div#menu{
+    display: none;
+}
+nav#ulmenu{
+    display: block;
+}
+ul li{
+    display: inline-block;
+    text-align: left;
+}

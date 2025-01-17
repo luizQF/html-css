@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Site com menu responsivo</title>
+    <link rel="stylesheet" href="estilos/style.css" media="all"><!--Mobile first-->
+    <link rel="stylesheet" href="estilos/tablet.css" media="screen and (min-width: 768px) and (max-width: 922px)"><!--Tablet-->
+    <link rel="stylesheet" href="estilos/desktop.css" media="screen and (min-width: 922px)">
+</head>
+<body>
+    <header>
+        <h1>Site com menu responsivo</h1>
+        <p>Testando o menu</p>   
+    </header>
+    <div id="menu" onclick="toggleMenu()"></div>
+        <nav id="ulmenu">
+            <ul>
+                <li>opção 1</li>
+                <li>opção 2</li>
+                <li>opção 3</li>
+                <li>opção 4</li>
+            </ul>
+        </nav>
+    <main>
+        <article>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Adipisci quia suscipit dolor fugit alias ipsa placeat blanditiis neque? Dolorum mollitia dignissimos quia eaque ipsam facilis? Odio dolorum cumque maxime laudantium? Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam esse libero perspiciatis quasi sunt quas ipsa sit. Quod illum nesciunt molestiae saepe quasi libero corrupti consectetur consequuntur? Explicabo, dolore delectus.<br> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tenetur voluptas ab et quis optio, eaque fugiat facere tempora nemo odit velit quas itaque quisquam esse minus nesciunt. Iure, rerum. Iusto. Lorem ipsum dolor sit, amet consectetur adipisicing elit.<br> Excepturi reprehenderit, veniam id distinctio possimus aliquid magni neque vitae suscipit adipisci explicabo sunt, sint voluptatibus, perferendis architecto est itaque in. Eos! Lorem ipsum dolor sit amet consectetur adipisicing elit.<br> Autem totam iste facere obcaecati repellat, perspiciatis, aperiam, sit unde dignissimos reprehenderit consequatur. Voluptas ab veritatis unde, dolore rem minima dolor vero? Lorem ipsum dolor sit, amet consectetur adipisicing elit.<br> Ex, a pariatur totam eaque dolore assumenda dolorem magnam est quam qui eos architecto optio dolor tempora sit veniam natus minus corporis. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatem praesentium ipsa ullam? Nostrum sunt esse labore eum! Aut tenetur non at repellat itaque porro facere, veritatis deleniti quidem recusandae reprehenderit. <br> Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur corporis saepe, voluptatem voluptate porro similique rerum vel expedita, repellat adipisci itaque nisi, nihil animi accusantium dignissimos neque minus! Necessitatibus, accusantium. <br> Lorem ipsum dolor, sit amet consectetur adipisicing elit. Exercitationem harum voluptatibus fugiat minima amet fuga expedita veritatis similique magni cumque modi, praesentium, adipisci incidunt! Quis pariatur laudantium enim sunt officia?</p>
+        </article>
+    </main>
+    <script>
+        function toggleMenu(){
+            const menu = document.querySelector('#ulmenu')
+            menu.classList.toggle('active')
+        }
+    </script>
+</body>
+</html>

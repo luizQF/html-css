@@ -1,0 +1,12 @@
+@media screen and (orientation: portrait) {
+    p::after{
+        content: 'modo retrato';
+        font: bold 2em black;
+    }
+}
+@media screen and (orientation: landscape){
+    p::after{
+        content: 'modo paisagem';
+        font: bold 2em black;
+    }
+}
