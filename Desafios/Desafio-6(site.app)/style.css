@@ -1,71 +1,48 @@
-@charset "UTF-8";
 *{
-    padding: 0px; 
+    padding: 0px;
     margin: 0px;
-    font-family: Arial, Helvetica, sans-serif;
-    font-variant: small-caps;
+}
+*::selection{
+    color: transparent;
 }
 body{
-    position: relative;
-    height: 100vh;
     background: white url('pacote-img/imagens/fundo-madeira.jpg') center center no-repeat;
     background-size: cover;
+    height: 100vh;
+    width: 100vw;
 }
 main{
-    position: relative;
     height: 100vh;
-    overflow: hidden;
 }
-#phone{
-    background: transparent url('pacote-img/imagens/frame-iphone.png') center center no-repeat;
-    width: 311px;
-    border-radius: 50px;
-    height: 627px;
-    display: block;
-    position: absolute;
+section#phone{
+    background:url('pacote-img/imagens/frame-iphone.png') center center no-repeat;
+    background-size: cover;
+    min-height: 627px;
+    max-width: 315px;
+    position: relative;
     top: 50%; left: 50%;
-    transform: translate(-50%, -50%);
-
+    transform: translate(-50%, -50%)
 }
-#screen{
-    position: absolute;
-    top: 50%; left: 50%;
-    transform: translate(-50%, -50%);
-    width: 269px;
-    height: 475px;
-    border-radius: 4px;
-    box-shadow: inset 1px 1px 6px rgba(0, 0, 0, 0.534);
-    
-}
-#social{
+    iframe{
+        position: absolute;
+        top: 78px; left: 25px;
+        width: 268px;
+        height: 476px;
+    }
+nav {
     display: inline-block;
-    position: absolute; 
-    left: 100%; top: 10%;
-    transition: transform 0.5s ease;;
-}
-#social a{
-    display: block;
-}
-#social img{
-    width: 50px;
-    border-radius: 50px;
-    margin-top: 10px;
-    box-sizing: border-box;
-    box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.388);
-    transition: transform 0.4s ease;
-}
-#social img:hover{
-    transform: scale(1.1);
-    border: 2px solid rgba(255, 255, 255, 0.33);
-}
-#botao{
     position: absolute;
-    left: 90%; top: 10px;
-    padding: 10px;
-    border-radius:50px;
-    cursor: pointer;
-    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.397);
+    top: 50px; left: 100%;
+    transform: translate(-100%);
 }
-#botao:hover {
-    background-color: rgb(189, 189, 189);
+nav a img:hover{
+    transform: scale(1.2);
+    border: solid 1px white;
+    box-sizing: border-box;
+}
+nav a img{
+    display: block;
+    margin: 10px;
+    border-radius: 50%;
+    width: 50px;
 }

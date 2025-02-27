@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>New site
+    </title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        body{
+            background:white url('imagem/fundo_paralax.jpeg') center center no-repeat fixed;
+            background-size: cover;
+            height: 200vh;
+        }
+        header{
+            background-image: linear-gradient(to right, blue, #b0b0f0);
+            padding: 20px;
+            color: white;
+            text-align: center;
+        }
+        nav{
+            background-image: linear-gradient(to right, blue, #b0b0f0);
+            padding: 10px;
+            font-size: 18px;
+        }
+            nav a{
+                background-image: linear-gradient(to right,#1b1b65, transparent);
+                padding: 8px;
+                border-radius: 5px;
+                color: rgb(248, 248, 248);
+                text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.367);
+                cursor: pointer;
+            }
+      main{
+        width: 900px;
+        background-color: white;
+        margin: auto;
+      }
+      article{
+        padding: 10px 0px 10px 0px
+      }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Misanga</h1>
+    </header>
+    <nav>
+        <a>Nosso contato</a>
+    </nav>
+    <main>
+        <section>
+            <article>
+                <h2>Consulte nossos valores</h2>
+                <ul> 
+                <p>Misangas</p>
+                    <li>
+                        20 peças vermelhas, 0,88$ cada
+                    </li>
+                    <li>
+                        10 peças azuis, 1$ cada
+                    </li>
+                    <li>
+                        15 peças pretas, 1$ cada
+                    </li>
+                </ul>
+            </article>
+        </section>
+        <section>
+            <h2>Consulte o melhor valor para você</h2>
+                <select name="misan" id="imisan" oninput="checar()">
+                    <optgroup label="valores">
+                        <option value="1$">Valor 1$</option>
+                        <option value="0,88$">Valor 0,88$</option>
+                        <option value="" selected>--SELECIONE--</option>
+                    </optgroup>
+                </select>
+        </section>   
+        <section>
+            <article>
+               
+        </section>
+    </main>
+</body>
+<script>
+    function checar(){
+        if(select.value == 'Valor 1$'){
+            alert('que chato')
+        }
+    }
+</script>
+</html>

@@ -1,12 +1,12 @@
-@charset "UTF-8";
-
-div#menu{
+header img{
     display: none;
 }
-nav#ulmenu{
+nav{
+    text-align: left;
     display: block;
 }
-ul li{
-    display: inline-block;
-    text-align: left;
+nav a {
+    display: block;
+    width: 50%;
+    display: inline;
 }
